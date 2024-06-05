@@ -1,2 +1,16 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import telebot
+
+
+TOKEN = '7397696215:AAHgo4pgUWPmoqzQbTtR9et7OdIuSpr-UDg'
+
+
+bot = telebot.TeleBot(TOKEN)
+
+
+@bot.message_handler()
+def echo_test(message: telebot.types.Message):
+    bot.send_message(message.chat.id, 'hello')
+
+
+
+@bot.massage_handler(commands=[])
